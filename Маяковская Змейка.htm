@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Маяковская Змейка</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="%D0%9C%D0%B0%D1%8F%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%D0%97%D0%BC%D0%B5%D0%B9%D0%BA%D0%B0_files/css2.css" rel="stylesheet">
+    <link rel="stylesheet" href="%D0%9C%D0%B0%D1%8F%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%D0%97%D0%BC%D0%B5%D0%B9%D0%BA%D0%B0_files/styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🐍 Маяковская Змейка</h1>
+        
+        <div class="game-stats">
+            <div class="stat-item">
+                <span class="stat-label">Счёт</span>
+                <span class="stat-value score-value" id="score">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Уровень</span>
+                <span class="stat-value level-value" id="level">1</span>
+            </div>
+        </div>
+        
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        
+        <div class="controls">
+            <div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem; color: #fff7ea;">
+                Первый лейм на районе получает месяц строгоча
+            </div>
+            <strong>Управление:</strong> Стрелки или WASD<br>
+            🏆 Цель: 250 очков и все пять уровней<br>
+            🔄 Новые препятствия каждые 50 очков<br>
+            <strong>R</strong>, <strong>Enter</strong> - перезапуск после Game Over
+        </div>
+        
+        <div class="game-over" id="gameOver" style="display: block;">
+            <h2>Игра окончена!</h2>
+            <p>Ваш счёт: <span id="finalScore" class="score-value">0</span></p>
+            <button class="restart-btn" onclick="restartGame()">Начать заново</button>
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                Или нажмите <strong>R</strong>, <strong>Enter</strong> или <strong>К</strong> для перезапуска
+            </p>
+        </div>
+    </div>
+
+    <script src="%D0%9C%D0%B0%D1%8F%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%D0%97%D0%BC%D0%B5%D0%B9%D0%BA%D0%B0_files/levelStructures.js"></script>
+    <script src="%D0%9C%D0%B0%D1%8F%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%D0%97%D0%BC%D0%B5%D0%B9%D0%BA%D0%B0_files/gameLogic.js"></script>
+
+
+</body></html>
